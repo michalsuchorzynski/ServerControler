@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerControler.UnitTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerControler.AdminApp", "ServerControler.AdminApp\ServerControler.AdminApp.csproj", "{B54D820D-971A-40D2-9695-B1E60140EEB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminServiceLibrary", "AdminServiceLibrary\AdminServiceLibrary.csproj", "{2AB04692-EB33-4535-BAD7-F7E7082107AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminService", "AdminService\AdminService.csproj", "{3C82A10F-47AD-4051-AC80-32B333F44C27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{B54D820D-971A-40D2-9695-B1E60140EEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B54D820D-971A-40D2-9695-B1E60140EEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B54D820D-971A-40D2-9695-B1E60140EEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB04692-EB33-4535-BAD7-F7E7082107AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB04692-EB33-4535-BAD7-F7E7082107AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB04692-EB33-4535-BAD7-F7E7082107AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB04692-EB33-4535-BAD7-F7E7082107AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C82A10F-47AD-4051-AC80-32B333F44C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C82A10F-47AD-4051-AC80-32B333F44C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C82A10F-47AD-4051-AC80-32B333F44C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C82A10F-47AD-4051-AC80-32B333F44C27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

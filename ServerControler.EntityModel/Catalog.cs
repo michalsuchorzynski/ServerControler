@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServerControler.EntityModel
 {
-    public class Class1
+    class Catalog
     {
     }
 }
