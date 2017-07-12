@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ServerControler.EntityModel;
+using ServerControler.TestConsole.AdminServiceLocal;
+//using ServerControler.TestConsole.AdminServiceServer;
 
 namespace ServerControler.TestConsole
 {
@@ -11,17 +13,15 @@ namespace ServerControler.TestConsole
     {
         static void Main(string[] args)
         {
-            using (var db = new DataBaseModel())
-            {
-                db.Tests.Add(new Test { Name = "Another Blog " });
-                db.SaveChanges();
-
-                foreach (var blog in db.Tests)
-                {
-                    Console.WriteLine(blog.Name);
-                }
-            }
+            AdminServiceClient client = new AdminServiceClient();
+            client.Open();
+            //Console.WriteLine(client.CopyAndPasteDirectory("nowy", "C:\\Users\\Michał\\Desktop\\Test", "C:\\Users\\Michał\\Desktop"));
+            //Console.WriteLine(client.AddNewDirectory("nowy", "\\192.168.1.8\\$C"));
+            //Console.WriteLine(client.DeleteFile("nowy.txt", "\\192.168.1.8\\$C"));
+            //Console.WriteLine(client.DeleteDirectory("nowy", "\\192.168.1.8\\$C"));
+            client.Close();
             Console.ReadKey();
+
         }
     }
 }

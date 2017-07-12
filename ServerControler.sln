@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerControler.TestConsole", "ServerControler.TestConsole\ServerControler.TestConsole.csproj", "{A8C59932-8019-4AFF-B32A-24AD75786754}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C82A10F-47AD-4051-AC80-32B333F44C27} = {3C82A10F-47AD-4051-AC80-32B333F44C27}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerControler.EntityModel", "ServerControler.EntityModel\ServerControler.EntityModel.csproj", "{7F423ABC-05B1-4AC8-AE57-187A2724E9FB}"
 EndProject

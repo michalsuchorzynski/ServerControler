@@ -7,39 +7,42 @@ using System.Text;
 
 namespace AdminServiceLibrary
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IAdminService
     {
-        [OperationContract]
-        string GetData(int value);
+        #region FileAndDirectoryControle
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        Boolean AddNewDirectory(string name, string path);
 
-        // TODO: Add your service operations here
-    }
+        [OperationContract]
+        Boolean AddNewFile(string name, string path);
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "AdminServiceLibrary.ContractType".
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        [OperationContract]
+        Boolean CopyAndPasteDirectory(string name, string sourcePath, string destinationPath);
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+        [OperationContract]
+        Boolean CopyAndPasteFile(string name, string sourcePath, string destinationPath);
 
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        [OperationContract]
+        Boolean CutAndPasteDirectory(string name, string sourcePath, string destinationPath);
+
+        [OperationContract]
+        Boolean CutAndPasteFile(string name, string sourcePath, string destinationPath);
+
+        [OperationContract]
+        void GetDirectoryInfo(string name, string path);
+
+        [OperationContract]
+        void GetFileInfo(string name, string path);
+
+        [OperationContract]
+        Boolean DeleteDirectory(string name, string path);
+
+        [OperationContract]
+        Boolean DeleteFile(string name, string path);
+
+        #endregion
+
     }
 }
