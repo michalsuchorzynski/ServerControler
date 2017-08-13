@@ -15,7 +15,13 @@ namespace ServerControler.TestConsole
         {
             AdminServiceClient client = new AdminServiceClient();
             client.Open();
-            //Console.WriteLine(client.CopyAndPasteDirectory("nowy", "C:\\Users\\Michał\\Desktop\\Test", "C:\\Users\\Michał\\Desktop"));
+            //client.CopyAndPasteDirectory("nowy", "C:\\Users\\Michał\\Desktop\\Test", "C:\\Users\\Michał\\Desktop"));
+            client.GetDirectoryInfo("nowy", "C:\\Users\\Michał\\Desktop\\Test");
+            //client.GetFileInfo("nowy.txt", "C:\\Users\\Michał\\Desktop\\Test");
+            //client.RenameFile("nowy.txt", "nowy2", "C:\\Users\\Michał\\Desktop\\Test");
+            client.RenameDirectory("nowy", "nowy3", "C:\\Users\\Michał\\Desktop\\Test");
+
+
             //Console.WriteLine(client.AddNewDirectory("nowy", "\\192.168.1.8\\$C"));
             //Console.WriteLine(client.DeleteFile("nowy.txt", "\\192.168.1.8\\$C"));
             //Console.WriteLine(client.DeleteDirectory("nowy", "\\192.168.1.8\\$C"));

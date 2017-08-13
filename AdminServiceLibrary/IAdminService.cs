@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.IO;
 
 namespace AdminServiceLibrary
 {
@@ -31,16 +32,22 @@ namespace AdminServiceLibrary
         Boolean CutAndPasteFile(string name, string sourcePath, string destinationPath);
 
         [OperationContract]
-        void GetDirectoryInfo(string name, string path);
+        DirectoryInfo GetDirectoryInfo(string name, string path);
 
         [OperationContract]
-        void GetFileInfo(string name, string path);
+        FileInfo GetFileInfo(string name, string path);
 
         [OperationContract]
         Boolean DeleteDirectory(string name, string path);
 
         [OperationContract]
         Boolean DeleteFile(string name, string path);
+
+        [OperationContract]
+        Boolean RenameFile(string oldName, string newName, string path);
+
+        [OperationContract]
+        Boolean RenameDirectory(string oldName, string newName, string path);
 
         #endregion
 
