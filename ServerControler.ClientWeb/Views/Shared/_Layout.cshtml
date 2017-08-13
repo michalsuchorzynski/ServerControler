@@ -1,17 +1,19 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>_Layout</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-grid.min.css">
+    <title>Serwer Controler</title>
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Style/Main.css">
-
-
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">*@
+    @Styles.Render("~/css")
 
 
 
@@ -35,15 +37,56 @@
     </header>
     <div class="container body-content mainContainer"> 
         @RenderBody()
+        <div class="dataTableControl">
+            <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Rozszerzenie</th>
+                        <th>Rozmiar</th>
+                        <th>Data modyfikacji</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <footer class="mainFooter">
         <div class="container">
             <span>Praca Inżynierska Michał Suchorzyński</span>
-            
         </div>        
     </footer>
-    <script src="~/Scripts/jQuery/jquery-3.1.1.min.js"></script>
-    <script src="~/Scripts/Bootstrap/bootstrap-select.min.js"></script>
-    <script src="~/Scripts/Bootstrap/bootstrap.min.js"></script>
+   
+
+    
+
+    @Scripts.Render("~/js")
+    
+    <script>
+        $(document).ready(function () {
+            ConfigureDataTables();
+            ConfigureDropDowns()
+        });
+
+    </script>
 </body>
 </html>

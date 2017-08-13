@@ -28,7 +28,7 @@
 .mainFooter {
     height:30px;
     width:100%;
-    position:absolute;
+    position:relative;
     bottom:0px;
 }
 .mainFooter .container {
@@ -43,3 +43,14 @@
     border-bottom:none;
 }
 /*HEADER AND FOOTER END*/
+
+.dataTableControl{
+    overflow-x:auto;
+}
+.dataTableControl {
+    background-color: #f9f9f9!important;
+}
+.scSelectedRow,
+.scSelectedItem {
+    background-color: red !important;
+}
