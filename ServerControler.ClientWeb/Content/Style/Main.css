@@ -1,0 +1,45 @@
+﻿body {
+    min-width: 600px;
+    background-color: #FAFAEF;
+}
+
+/*HEADER AND FOOTER START*/
+.mainHeader {
+    min-height: 15vh;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+#logo {
+    background-image: url("../Images/logo.png");
+    width: 615px;
+    height: 90px;
+    display: block;
+    margin-left: calc(50% - 307px);
+    cursor: pointer;
+    background-position-y:-15px;
+}
+.mainHeader .nav {
+    width: 100%;
+}
+.mainHeader .nav a:hover {
+    background-color:#333!important;
+}
+.mainFooter {
+    height:30px;
+    width:100%;
+    position:absolute;
+    bottom:0px;
+}
+.mainFooter .container {
+    height:100%;    
+    background-color: #222;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    color:#fff;
+    text-align:center;
+    padding-top:5px;
+    border:1px solid #080808;
+    border-bottom:none;
+}
+/*HEADER AND FOOTER END*/

@@ -4,11 +4,46 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>_Layout</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/Main.css">
+
+
+
+
+
 </head>
 <body>
-    <div> 
-        <span>Layout</span>
+    <header class="mainHeader">
+        <div class="container">
+            <a id="logo"></a>
+        </div>
+        <div class="navbar navbar-inverse">
+            <div class="container">             
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="col-md-4">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="col-md-4">@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="col-md-4">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content mainContainer"> 
         @RenderBody()
     </div>
+    <footer class="mainFooter">
+        <div class="container">
+            <span>Praca Inżynierska Michał Suchorzyński</span>
+            
+        </div>        
+    </footer>
+    <script src="~/Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
